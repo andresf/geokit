@@ -13,20 +13,11 @@ Gem::Specification.new do |spec|
   spec.homepage      = "http://geokit.org"
   spec.license       = "MIT"
 
-  spec.has_rdoc = true
-  spec.rdoc_options = ["--main", "README.markdown"]
-  spec.extra_rdoc_files = ["README.markdown"]
-  spec.extensions = 'ext/mkrf_conf.rb'
-
-  spec.files         = `git ls-files`.split($/)
-  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
-
   spec.add_dependency "multi_json", ">= 1.3.2"
-  spec.add_dependency 'coveralls'
-  spec.add_dependency "bundler", "> 1.0"
-  spec.add_dependency 'simplecov'
-  spec.add_dependency "simplecov-rcov"
-  spec.add_dependency 'rake'
-  spec.add_dependency 'mocha'
+  spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency "bundler", "> 1.0"
+  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency "simplecov-rcov"
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'mocha'
 end
